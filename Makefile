@@ -12,6 +12,6 @@ stop:
 	docker stop $$(docker ps -a -q --filter ancestor=${wordpress-image-name} --format="{{.ID}}")
 	docker stop $$(docker ps -a -q --filter ancestor=${mysql-image-name} --format="{{.ID}}")
 test:
-	curl localhost:8080
+	curl -Is localhost:8000
 
 
